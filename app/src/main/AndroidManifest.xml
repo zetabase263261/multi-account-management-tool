@@ -1,0 +1,68 @@
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.madhub.multiaccountmanageme">
+
+    <!-- 
+    Multi Account Management Tool Manifest Configuration
+    This application leverages MadHub's powerful automation features to enable seamless management of multiple accounts across platforms like Facebook, Instagram, and TikTok.
+    It supports continuous operation on real Android devices, cloud phones, or emulators.
+    -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 
+        The MainActivity serves as the entry point for the application. 
+        It provides a graphical interface allowing users to configure account management settings without the need for coding.
+        This enhances user experience through easy parameter configuration.
+        -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 
+        The AutomationService component is responsible for handling background operations. 
+        This service allows for 24/7 automated management of multiple accounts, ensuring that tasks are executed without interruption.
+        -->
+        <service android:name=".AutomationService" />
+
+    </application>
+
+    <!-- 
+    Permission Declarations for Multi Account Management Tool
+    The following permissions are necessary for the app to function effectively:
+    -->
+
+    <!-- 
+    This powerful permission enables internet access for the application, allowing it to connect to social media platforms 
+    for account management operations. It is vital for retrieving and sending data to and from the cloud.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 
+    Comprehensive capability: This permission allows the app to read external storage, which is essential for accessing media files 
+    that may be used in social media posts and management tasks.
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 
+    This permission is required to write to external storage, enabling the application to save media files or logs generated 
+    during account management processes.
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>
+``` 
+
+### Explanation:
+- The manifest configuration establishes features critical to the functionality of the **Multi Account Management Tool** using MadHub's automation capabilities.
+- Key components like `MainActivity` and `AutomationService` are registered, with explanations highlighting their roles in user interaction and automation.
+- Permissions are chosen based on the app's features, ensuring necessary capabilities for network access and media handling are explicitly described.
